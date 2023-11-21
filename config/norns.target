@@ -4,7 +4,7 @@ Description=norns
 Requires=sockets.target
 Requires=sound.target
 
-Requires=norns-jack.service
+Requires=jack.service
 Requires=norns-crone.service
 Requires=norns-sclang.service
 Requires=norns-matron.service
