@@ -1,9 +1,15 @@
 # hold packages we don't want to update
 echo "raspberrypi-kernel hold" | sudo dpkg --set-selections
 
+cd ~
+s
+
+
+
 sudo apt-get install -y libevdev-dev liblo-dev libudev-dev libcairo2-dev liblua5.3-dev libavahi-compat-libdnssd-dev libasound2-dev libncurses5-dev libncursesw5-dev libsndfile1-dev libboost-dev libnanomsg-dev
 sudo apt install --no-install-recommends -y ladspalist 
 sudo apt install --no-install-recommends network-manager dnsmasq-base midisport-firmware samba
+sudo apt-get install -y libgpiod-dev
 
 cd /home/we
 
@@ -88,6 +94,33 @@ sudo apt purge exim4-* nfs-common triggerhappy
 
 # uninstall packages we don't need
 sudo apt purge libraspberrypi-doc modemmanager
+
+cd /home/we
+git clone https://github.com/SolsticeFX/norns-bookworm.git norns
+
+cd /home/we/norns
+git submodule update --init --recursive
+
+find='rU'
+replace='r'
+sed "s/$find/$replace/g" /home/we/norns/.waf3-2.0.14-b622f2ab824891c8ef265a3ce53f48c6/waflib/Context.py
+sed "s/$find/$replace/g" /home/we/norns/.waf3-2.0.14-b622f2ab824891c8ef265a3ce53f48c6/waflib/Context.py > /home/we/norns/.waf3-2.0.14-b622f2ab824891c8ef265a3ce53f48c6/waflib/Context.py
+sed -i "s/$find/$replace/g" /home/we/norns/.waf3-2.0.14-b622f2ab824891c8ef265a3ce53f48c6/waflib/Context.py
+
+sed "s/$find/$replace/g" /home/we/norns/.waf3-2.0.14-b622f2ab824891c8ef265a3ce53f48c6/waflib/ConfigSet.py
+sed "s/$find/$replace/g" /home/we/norns/.waf3-2.0.14-b622f2ab824891c8ef265a3ce53f48c6/waflib/ConfigSet.py > /home/we/norns/.waf3-2.0.14-b622f2ab824891c8ef265a3ce53f48c6/waflib/ConfigSet.py
+sed -i "s/$find/$replace/g" /home/we/norns/.waf3-2.0.14-b622f2ab824891c8ef265a3ce53f48c6/waflib/ConfigSet.py
+
+export QT_QPA_PLATFORM=offscreen
+echo | sclang
+
+cd /home/we/sc
+./install.sh
+
+cd /home/we
+
+
+
 
 # cleanup
 sudo apt --purge -y autoremove
