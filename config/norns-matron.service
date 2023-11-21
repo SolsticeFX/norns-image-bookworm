@@ -1,10 +1,11 @@
 [Unit]
-After=norns-jack.service
+After=jack.service
 
 [Service]
 Type=simple
 User=we
-Group=we
+Group=audio
+Environment=JACK_PROMISCUOUS_SERVER=jack
 ExecStart=/home/we/norns/build/ws-wrapper/ws-wrapper ws://*:5555 /home/we/norns/build/matron/matron
 
 [Install]
