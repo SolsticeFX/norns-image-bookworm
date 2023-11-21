@@ -1,13 +1,14 @@
 [Unit]
-After=norns-jack.service
-Requires=norns-jack.service
+After=jack.service
+Requires=jack.service
 
 [Service]
 Type=simple
 User=we
-Group=we
+Group=audio
 LimitRTPRIO=95
 LimitMEMLOCK=infinity
+Environment=JACK_PROMISCUOUS_SERVER=jack
 ExecStart=/home/we/norns/build/crone/crone
 
 [Install]
