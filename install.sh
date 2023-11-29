@@ -2,7 +2,6 @@
 echo "raspberrypi-kernel hold" | sudo dpkg --set-selections
 
 cd ~
-s
 
 
 
