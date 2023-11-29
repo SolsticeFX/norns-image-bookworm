@@ -24,6 +24,8 @@ cd /home/we/supercollider
 git submodule update --init --recursive
 cmake     -DCMAKE_BUILD_TYPE=Release     -DNATIVE=1     -DSSE=0     -DSSE2=0     -DENABLE_TESTSUITE=0     -DCMAKE_SKIP_RPATH=1     -DLIBSCSYNTH=0     -DSUPERNOVA=0     -DSC_IDE=0     -DSC_ED=0     -DSC_EL=0     -DSC_VIM=1     -DNO_X11=ON -DSC_QT=OFF 
 
+cd /home/we
+git clone https://github.com/SolsticeFX/norns-image-bookworm.git norns-image
 cd /home/we/norns-image
 sudo cp --remove-destination config/norns-crone.service /etc/systemd/system/norns-crone.service
 #sudo rm /etc/systemd/system/norns-supernova.service
