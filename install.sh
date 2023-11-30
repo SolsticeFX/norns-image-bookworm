@@ -9,6 +9,7 @@ sudo apt-get install -y libevdev-dev liblo-dev libudev-dev libcairo2-dev liblua5
 sudo apt install --no-install-recommends -y ladspalist 
 sudo apt install --no-install-recommends network-manager dnsmasq-base midisport-firmware samba
 sudo apt-get install -y libgpiod-dev
+sudo apt-get install xserver-xorg-legacy
 
 cd /home/we
 
