@@ -4,7 +4,7 @@ echo "raspberrypi-kernel hold" | sudo dpkg --set-selections
 cd ~
 
 
-
+sudo apt install -y cmake
 sudo apt-get install -y libevdev-dev liblo-dev libudev-dev libcairo2-dev liblua5.3-dev libavahi-compat-libdnssd-dev libasound2-dev libncurses5-dev libncursesw5-dev libsndfile1-dev libboost-dev libnanomsg-dev
 sudo apt install --no-install-recommends -y ladspalist 
 sudo apt install --no-install-recommends -y network-manager dnsmasq-base midisport-firmware samba
