@@ -8,6 +8,11 @@ mkdir ~/.local/share/
 mkdir ~/.local/share/SuperCollider
 mkdir ~/.local/share/SuperCollider/Extensions
 
+mkdir ~/dust
+mkdir ~/dust/data
+mkdir ~/dust/audio
+mkdir ~/dust/code
+
 sudo apt install -y cmake
 sudo apt-get install -y libevdev-dev liblo-dev libudev-dev libcairo2-dev liblua5.3-dev libavahi-compat-libdnssd-dev libasound2-dev libncurses5-dev libncursesw5-dev libsndfile1-dev libboost-dev libnanomsg-dev
 sudo apt install --no-install-recommends -y ladspalist 
@@ -29,6 +34,8 @@ git clone https://github.com/supercollider/supercollider.git
 cd /home/we/supercollider
 git submodule update --init --recursive
 cmake     -DCMAKE_BUILD_TYPE=Release     -DNATIVE=1     -DSSE=0     -DSSE2=0     -DENABLE_TESTSUITE=0     -DCMAKE_SKIP_RPATH=1     -DLIBSCSYNTH=0     -DSUPERNOVA=0     -DSC_IDE=0     -DSC_ED=0     -DSC_EL=0     -DSC_VIM=1     -DNO_X11=ON -DSC_QT=OFF 
+
+sudo apt install supercollider -y
 
 cd /home/we
 git clone https://github.com/SolsticeFX/norns-image-bookworm.git norns-image
