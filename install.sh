@@ -117,7 +117,7 @@ sed -i "s/$find/$replace/g" /home/we/norns/.waf3-2.0.14-b622f2ab824891c8ef265a3c
 export QT_QPA_PLATFORM=offscreen
 echo | sclang
 
-cd /home/we/sc
+cd /home/we/norns/sc
 ./install.sh
 
 cd /home/we
