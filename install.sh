@@ -3,6 +3,10 @@ echo "raspberrypi-kernel hold" | sudo dpkg --set-selections
 
 cd ~
 
+mkdir ~/.local/
+mkdir ~/.local/share/
+mkdir ~/.local/share/SuperCollider
+mkdir ~/.local/share/SuperCollider/Extensions
 
 sudo apt install -y cmake
 sudo apt-get install -y libevdev-dev liblo-dev libudev-dev libcairo2-dev liblua5.3-dev libavahi-compat-libdnssd-dev libasound2-dev libncurses5-dev libncursesw5-dev libsndfile1-dev libboost-dev libnanomsg-dev
