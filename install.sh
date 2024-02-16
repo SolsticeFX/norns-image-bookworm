@@ -126,6 +126,9 @@ cd /home/we/norns/sc
 
 cd /home/we
 
+wget https://github.com/monome/maiden/releases/download/v1.1.5/maiden-v1.1.5.tgz
+tar -xvf maiden-v1.1.5.tgz
+rm maiden-v1.1.5.tgz
 
 
 
