@@ -1,0 +1,14 @@
+[Unit]
+Description=SOLSTICE-TTYMIDI
+After=jack.service
+
+[Service]
+Type=simple
+User=we
+Group=audio
+ExecStart=/usr/local/bin/solstice-ttymidi -s /dev/ttyAMA2 -b 38400
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
