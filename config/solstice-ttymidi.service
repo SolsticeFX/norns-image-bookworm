@@ -6,7 +6,7 @@ After=jack.service
 Type=simple
 User=we
 Group=audio
-ExecStart=/usr/local/bin/solstice-ttymidi -s /dev/ttyAMA2 -b 38400
+ExecStart=/usr/bin/solstice-ttymidi -s /dev/ttyAMA2 -b 38400
 Restart=always
 RestartSec=2
 
