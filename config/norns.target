@@ -9,7 +9,7 @@ Requires=norns-crone.service
 Requires=norns-sclang.service
 Requires=norns-matron.service
 Requires=norns-maiden.service
-
+Requires=solstice-ttymidi.service
 AllowIsolate=yes
 
 [Install]
