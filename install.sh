@@ -20,6 +20,8 @@ sudo apt install --no-install-recommends -y network-manager dnsmasq-base midispo
 sudo apt-get install -y libgpiod-dev
 sudo apt-get -y install libjack-jackd2-dev
 sudo apt-get -y install xserver-xorg-legacy
+sudo apt-get install -y jalv
+sudo apt-get install -y lilv-utils
 
 cd /home/we
 
